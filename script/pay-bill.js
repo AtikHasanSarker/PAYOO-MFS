@@ -1,20 +1,20 @@
-document.getElementById('add-money-btn').addEventListener('click', function(){
-    const bankAccount = getValueFormInput('add-money-bank');
+document.getElementById('pay-bill-btn').addEventListener('click', function(){
+    const bankAccount = getValueFormInput('pay-bill-bank');
     if(bankAccount == 'Select Bank'){
         alert("Please select a bank");
         return;
     }
 
-    const bankAccountNumber = getValueFormInput('add-money-number');
+    const bankAccountNumber = getValueFormInput('pay-bill-number');
     if(bankAccountNumber.length !== 11){
         alert("Invalid Agent Number");
         return;
     }
-    const amount = getValueFormInput('add-money-amount');
+    const amount = getValueFormInput('pay-bill-amount');
     const currentBalance = getBalance();
     const newBalance = currentBalance + Number(amount);
     console.log(newBalance)
-    const pin = getValueFormInput('add-money-pin');
+    const pin = getValueFormInput('pay-bill-pin');
     if(pin === "4321"){
         alert(`Add Money Successful from ${bankAccount} 
         at ${new Date()}`)
@@ -24,7 +24,7 @@ document.getElementById('add-money-btn').addEventListener('click', function(){
         const newHistory = document.createElement('div');
         newHistory.innerHTML = `
         <div class="transaction-card p-5 bg-base-100 rounded-md">
-        Add Money Successful from ${bankAccount} 
+        Payment Successful to ${bankAccount} 
             Account No: ${bankAccountNumber}
             at ${new Date()}
         </div> 
