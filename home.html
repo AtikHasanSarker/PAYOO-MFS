@@ -60,29 +60,29 @@
             </div>
             <div>
                 <div class="buttons grid grid-cols-3 gap-5">
-                    <button onclick="showOnly('add-money')" class="btn flex-col py-4 rounded-lg h-full">
+                    <button onclick="showOnly('add-money', 'add-money-card-btn')" id="add-money-card-btn" class="text-neutral/50 btn flex-col py-4 rounded-lg h-full">
                         <img src="./assets/opt-1.png" alt="">
-                        <p class="text-neutral/50 font-medium">Add Balance</p>
+                        <p class="font-medium">Add Balance</p>
                     </button>
-                    <button onclick="showOnly('cashout')" class="btn flex-col py-4 rounded-lg h-full">
+                    <button onclick="showOnly('cashout', 'cashOut-money-card-btn')" id="cashOut-money-card-btn" class="text-neutral/50 btn flex-col py-4 rounded-lg h-full">
                         <img src="./assets/opt-2.png" alt="">
-                        <p class="text-neutral/50 font-medium">Cashout</p>
+                        <p class="font-medium">Cashout</p>
                     </button>
-                    <button onclick="showOnly('transfer-money')" class="btn flex-col py-4 rounded-lg h-full">
+                    <button onclick="showOnly('transfer-money', 'send-money-card-btn')" id="send-money-card-btn" class="text-neutral/50 btn flex-col py-4 rounded-lg h-full">
                         <img src="./assets/opt-3.png" alt="">
-                        <p class="text-neutral/50 font-medium">Transfer Money</p>
+                        <p class="font-medium">Transfer Money</p>
                     </button>
-                    <button onclick="showOnly('get-bonus')" class="btn flex-col py-4 rounded-lg h-full">
+                    <button onclick="showOnly('get-bonus', 'get-money-card-btn')" id="get-money-card-btn" class="text-neutral/50 btn flex-col py-4 rounded-lg h-full">
                         <img src="./assets/opt-4.png" alt="">
-                        <p class="text-neutral/50 font-medium">Get Bonus</p>
+                        <p class="font-medium">Get Bonus</p>
                     </button>
-                    <button onclick="showOnly('pay-bill')" class="btn flex-col py-4 rounded-lg h-full">
+                    <button onclick="showOnly('pay-bill', 'pay-money-card-btn')" id="pay-money-card-btn" class="text-neutral/50 btn flex-col py-4 rounded-lg h-full">
                         <img src="./assets/opt-5.png" alt="">
-                        <p class="text-neutral/50 font-medium">Pay Bill</p>
+                        <p class="font-medium">Pay Bill</p>
                     </button>
-                    <button onclick="showOnly('transaction-history')" class="btn flex-col py-4 rounded-lg h-full">
+                    <button onclick="showOnly('transaction-history', 'history-money-card-btn')" id="history-money-card-btn" class="text-neutral/50 btn flex-col py-4 rounded-lg h-full">
                         <img src="./assets/opt-6.png" alt="">
-                        <p class="text-neutral/50 font-medium">Transactions</p>
+                        <p class="font-medium">Transactions</p>
                     </button>
                 </div>
             </div>
@@ -187,9 +187,14 @@
         <section id="transaction-history" class="w-11/12 mx-auto py-5 h-[600px] hidden">
             <h2 class="font-bold text-[18px] text-center mb-5">Transactions</h2>
             <div id="history-container" class="space-y-5">
+                
             </div>
         </section>
+        <section class="bg-[#0377fc14]">
+
+        </section>
     </section>
+    <!-- all js file  -->
     <script src="./script/machine.js"></script>
     <script src="./script/add-money.js"></script>
     <script src="/script/cashout.js"></script>
